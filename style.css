@@ -1,0 +1,744 @@
+/* ==================== VARIÁVEIS ==================== */
+:root {
+    /* Cores da Marca */
+    --cor-azul: #5271ff;
+    --cor-dourado: #d4af13;
+    --cor-cinza-claro: #d9d9d9;
+    --cor-preto: #000000;
+    --cor-branco: #ffffff;
+    
+    /* Cores de Suporte */
+    --cor-preto-fundo: #0a0a0a;
+    --cor-preto-card: #121212;
+    --cor-texto: #cccccc;
+    
+    /* Tipografia */
+    --fonte-principal: 'Poppins', sans-serif;
+    
+    /* Sombras */
+    --sombra-dourada: 0 4px 15px rgba(212, 175, 19, 0.2);
+    --sombra-azul: 0 4px 15px rgba(82, 113, 255, 0.2);
+    
+    /* Transições */
+    --transicao-padrao: all 0.3s ease;
+    
+    /* Header */
+    --altura-header: 3.5rem;
+}
+
+/* ==================== RESET BÁSICO ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-preto-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    color: var(--cor-cinza-claro);
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-azul);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==================== CLASSES UTILITÁRIAS ==================== */
+.container {
+    max-width: 1100px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section {
+    padding: 6rem 0 2rem;
+}
+
+.section__title {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--cor-cinza-claro);
+}
+
+.section__subtitle {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cor-dourado);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ==================== BOTÕES (CTAs) ==================== */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transicao-padrao);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--cor-azul), #3a5aff);
+    color: var(--cor-branco);
+    box-shadow: var(--sombra-azul);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--cor-dourado), #f5d13d);
+    color: var(--cor-preto);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-dourada);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--cor-dourado);
+    border: 1px solid var(--cor-dourado);
+    padding: 0.5rem 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--cor-dourado);
+    color: var(--cor-preto);
+}
+
+.btn-lg {
+    font-size: 1.1rem;
+    padding: 1.2rem 3rem;
+}
+
+.btn i {
+    margin-left: 0.5rem;
+    transition: var(--transicao-padrao);
+}
+
+.btn:hover i {
+    transform: translateX(5px);
+}
+
+/* ==================== HEADER (Cabeçalho Fixo) ==================== */
+.header {
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: var(--transicao-padrao);
+}
+
+.nav {
+    height: var(--altura-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-dourado);
+    transition: var(--transicao-padrao);
+}
+.nav__logo:hover {
+    color: var(--cor-azul);
+}
+
+/* === INÍCIO DA CORREÇÃO (Desktop) === */
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem; /* Aumentei o gap para telas maiores */
+}
+
+.nav__link {
+    color: var(--cor-cinza-claro);
+    font-weight: 500;
+    transition: var(--transicao-padrao);
+}
+
+.nav__link:hover {
+    color: var(--cor-dourado);
+}
+
+.nav__toggle,
+.nav__close {
+    font-size: 1.5rem;
+    color: var(--cor-cinza-claro);
+    cursor: pointer;
+    display: none; /* Escondido por padrão no desktop */
+}
+/* === FIM DA CORREÇÃO === */
+
+
+/* Efeito 'scrolled' no header (via JS) */
+.header-scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    height: calc(var(--altura-header) - 0.5rem);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    background: url('assets/hero-bg.png') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(0, 0, 0, 0.7) 40%, 
+        rgba(82, 113, 255, 0.1) 100%);
+    z-index: 1;
+}
+
+.hero__container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero__data {
+    max-width: 600px;
+}
+
+.hero__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--cor-dourado);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero__description {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    color: var(--cor-cinza-claro);
+}
+
+/* ==================== SOBRE ==================== */
+.about__container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about__description {
+    margin-bottom: 2rem;
+}
+
+.about__values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+
+.value__item i {
+    font-size: 2rem;
+    color: var(--cor-azul);
+    margin-bottom: 0.5rem;
+}
+
+.value__item h3 {
+    color: var(--cor-dourado);
+    margin-bottom: 0.2rem;
+}
+
+.about__image img {
+    border-radius: 10px;
+    box-shadow: var(--sombra-azul);
+}
+
+/* ==================== SERVIÇOS ==================== */
+.servicos__container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.servico__card {
+    background-color: var(--cor-preto-card);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--cor-azul);
+    transition: var(--transicao-padrao);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.servico__card:hover {
+    transform: translateY(-8px);
+    border-bottom-color: var(--cor-dourado);
+    box-shadow: var(--sombra-dourada);
+}
+
+.servico__card i {
+    font-size: 2.5rem;
+    color: var(--cor-azul);
+    margin-bottom: 1rem;
+    display: block;
+    transition: var(--transicao-padrao);
+}
+
+.servico__card:hover i {
+    color: var(--cor-dourado);
+}
+
+.servico__card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ==================== PORTFÓLIO ==================== */
+.portfolio__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.portfolio__card {
+    background-color: var(--cor-preto-card);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transicao-padrao);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.portfolio__card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px var(--cor-dourado);
+}
+
+.portfolio__image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    transition: var(--transicao-padrao);
+}
+
+.portfolio__card:hover .portfolio__image img {
+    transform: scale(1.1);
+}
+
+.portfolio__data {
+    padding: 1.5rem;
+}
+
+.portfolio__data h3 {
+    color: var(--cor-dourado);
+    font-size: 1.2rem;
+}
+
+.portfolio__data p {
+    margin: 0.5rem 0 1rem;
+}
+
+/* ==================== DEPOIMENTOS ==================== */
+.depoimentos__container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.depoimento__card {
+    background-color: var(--cor-preto-card);
+    padding: 2rem;
+    border-radius: 10px;
+    border-top: 4px solid var(--cor-dourado);
+    font-style: italic;
+}
+
+.depoimento__card p {
+    margin-bottom: 1rem;
+}
+
+.depoimento__card h4 {
+    font-style: normal;
+    color: var(--cor-cinza-claro);
+}
+
+.depoimento__card span {
+    font-style: normal;
+    font-size: 0.8rem;
+    color: var(--cor-azul);
+}
+
+.depoimento__estrelas {
+    margin-top: 1rem;
+    color: var(--cor-dourado);
+}
+
+/* ==================== CTA (Chamada para Ação) ==================== */
+.cta__section {
+    background: linear-gradient(45deg, var(--cor-azul), var(--cor-dourado));
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta__title {
+    color: var(--cor-preto);
+    font-size: 2rem;
+}
+
+.cta__description {
+    color: var(--cor-preto-fundo);
+    margin: 1rem 0 2rem;
+    font-size: 1.1rem;
+}
+
+/* Botão do CTA */
+.cta__section .btn-primary {
+    background: var(--cor-preto);
+    color: var(--cor-branco);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.cta__section .btn-primary:hover {
+    background: var(--cor-branco);
+    color: var(--cor-preto);
+    transform: scale(1.05);
+}
+
+/* ==================== CONTATO ==================== */
+.contato__container {
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__input {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cor-preto-card);
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: var(--cor-cinza-claro);
+    font-family: var(--fonte-principal);
+}
+
+.form__input:focus {
+    outline: none;
+    border-color: var(--cor-dourado);
+}
+
+textarea.form__input {
+    resize: vertical;
+}
+
+.contato__info {
+    background-color: var(--cor-preto-card);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--cor-azul);
+}
+
+.contato__info h3 {
+    margin-bottom: 1.5rem;
+    color: var(--cor-dourado);
+}
+
+.contato__info p {
+    margin-bottom: 1rem;
+}
+.contato__info i {
+    color: var(--cor-dourado);
+    margin-right: 1rem;
+}
+
+.social__icons {
+    margin-top: 2rem;
+}
+
+.social__icons a {
+    font-size: 1.5rem;
+    color: var(--cor-cinza-claro);
+    margin-right: 1.5rem;
+    transition: var(--transicao-padrao);
+}
+
+.social__icons a:hover {
+    color: var(--cor-dourado);
+    transform: translateY(-3px);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+    background-color: var(--cor-preto-card);
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.footer__copy {
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+}
+
+.footer__credits {
+    font-size: 0.8rem;
+    color: var(--cor-dourado);
+}
+
+/* ==================== BOTÃO WHATSAPP ==================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: var(--transicao-padrao);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(15deg);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* ==================== BOTÃO SCROLL UP ==================== */
+.scrollup {
+    position: fixed;
+    right: 20px;
+    bottom: -30%; /* Começa escondido */
+    background-color: var(--cor-dourado);
+    color: var(--cor-preto);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    z-index: 99;
+    transition: var(--transicao-padrao);
+}
+
+.scrollup:hover {
+    background-color: var(--cor-azul);
+    color: var(--cor-branco);
+    transform: translateY(-4px);
+}
+
+/* Mostrar scroll up (via JS) */
+.show-scroll {
+    bottom: 90px; /* Aparece acima do botão de WhatsApp */
+}
+
+
+/* ========================================================= */
+/* ==================== RESPONSIVIDADE ===================== */
+/* ========================================================= */
+
+/* === CORREÇÃO PRINCIPAL ===
+  Mudei o breakpoint de 768px para 992px.
+  Agora, telas de notebook pequenas e tablets mostrarão o menu hambúrguer.
+*/
+@media screen and (max-width: 992px) {
+    .nav__toggle,
+    .nav__close {
+        display: block; /* Mostra os botões de toggle e fechar */
+    }
+    
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Começa fora da tela */
+        width: 70%;
+        height: 100%;
+        background-color: var(--cor-preto-card);
+        padding: 4rem 2rem 0;
+        z-index: 101;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+    
+    /* Mostrar menu (via JS) */
+    .show-menu {
+        right: 0;
+    }
+    
+    .nav__list {
+        flex-direction: column; /* Menu vertical */
+        gap: 2rem;
+    }
+    
+    .nav__link {
+        font-size: 1.2rem;
+        color: var(--cor-cinza-claro);
+    }
+    .nav__link:hover {
+        color: var(--cor-dourado);
+    }
+    
+    .nav__close {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+    }
+    
+    /* Diminui altura do header no scroll em mobile */
+    .header-scrolled {
+        height: var(--altura-header);
+    }
+    
+    /* Ajustes gerais de seção */
+    .section {
+        padding: 4rem 0 1rem;
+    }
+    
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    .hero {
+        height: 90vh;
+    }
+    
+    .hero__title {
+        font-size: 2.5rem;
+    }
+    
+    .hero__description {
+        font-size: 1rem;
+    }
+    
+    .about__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .about__image {
+        order: -1; /* Imagem vem antes do texto */
+    }
+    
+    .servicos__container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Ajuste para portfolio em telas médias (tablets) */
+    .portfolio__container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    
+    .depoimentos__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contato__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .contato__info {
+        margin-top: 2rem;
+    }
+
+    .show-scroll {
+        bottom: 90px;
+    }
+}
+
+/* Ajuste fino para tablets (ex: 768px) */
+@media screen and (max-width: 768px) {
+     .portfolio__container {
+        grid-template-columns: 1fr; /* Força 1 coluna em tablets */
+    }
+    
+    .hero__title {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* Telas pequenas (Celulares) */
+@media screen and (max-width: 480px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .section__title {
+        font-size: 1.75rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .btn-lg {
+        padding: 1rem 2rem;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .scrollup {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        right: 15px;
+    }
+    
+    .show-scroll {
+        bottom: 75px;
+    }
+}
