@@ -1,3 +1,15 @@
+/* ==================== PRELOADER ==================== */
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+
+  if (preloader) {
+    // Adiciona um pequeno delay para garantir que tudo está renderizado
+    setTimeout(() => {
+      preloader.classList.add("preloader-hidden");
+    }, 250); // 250ms de delay
+  }
+});
+
 /* ==================== MOSTRAR/ESCONDER MENU MOBILE ==================== */
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle"),
@@ -89,18 +101,6 @@ sr.reveal(".cta__data", { origin: "bottom" });
 sr.reveal(".contato__form", { origin: "left" });
 sr.reveal(".contato__info", { origin: "right" });
 
-/* ==================== SIMULAÇÃO FORMULÁRIO ==================== */
-// Apenas para fins de demonstração, já que não temos back-end
-const contactForm = document.getElementById("contact-form");
-
-if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Impede o envio real
-
-    // Simples feedback para o usuário
-    alert("Mensagem enviada com sucesso! (Demonstração)");
-
-    // Limpa o formulário
-    contactForm.reset();
-  });
-}
+/* O BLOCO DE SIMULAÇÃO DO FORMULÁRIO FOI REMOVIDO DAQUI.
+   Agora o formulário irá enviar para o Formspree corretamente.
+*/

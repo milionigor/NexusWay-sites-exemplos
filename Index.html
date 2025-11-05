@@ -1,316 +1,463 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Nexusway - Agência de Criação de Sites e Soluções Digitais</title>
-    <meta name="description" content="Nexusway: Criamos experiências digitais que transformam negócios. Sites profissionais, design responsivo e SEO. Solicite sua proposta.">
-    
-    <link rel="icon" href="assets/favicon.png" type="image/png">
-    
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Nexusway: Criamos experiências digitais que transformam negócios. Sites profissionais, design responsivo e SEO. Solicite sua proposta."
+    />
+
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
 
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#home" class="nav__logo">Nexusway</a>
-            
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Início</a></li>
-                    <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
-                    <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
-                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfólio</a></li>
-                    <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
-                </ul>
-                <div class="nav__close" id="nav-close">
-                    <i class="fas fa-times"></i>
-                </div>
-            </div>
-            
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+      <nav class="nav container">
+        <a href="#home" class="nav__logo">Nexusway</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">Início</a>
+            </li>
+            <li class="nav__item">
+              <a href="#sobre" class="nav__link">Sobre</a>
+            </li>
+            <li class="nav__item">
+              <a href="#servicos" class="nav__link">Serviços</a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">Portfólio</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contato" class="nav__link">Contato</a>
+            </li>
+          </ul>
+          <div class="nav__close" id="nav-close">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
     </header>
 
     <main class="main">
-        
-        <section class="hero" id="home">
-            <div class="hero__overlay"></div>
-            <div class="hero__container container grid">
-                <div class="hero__data">
-                    <h1 class="hero__title">Criamos experiências digitais que transformam negócios</h1>
-                    <p class="hero__description">
-                        Somos a Nexusway. Unimos design futurista e tecnologia de ponta para
-                        construir sites que impressionam, convertem e escalam.
-                    </p>
-                    <a href="#contato" class="btn btn-primary">
-                        Solicitar Proposta <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section class="hero" id="home">
+        <div class="hero__overlay"></div>
+        <div class="hero__container container grid">
+          <div class="hero__data">
+            <h1 class="hero__title">
+              Criamos experiências digitais que transformam negócios
+            </h1>
+            <p class="hero__description">
+              Somos a Nexusway. Unimos design futurista e tecnologia de ponta
+              para construir sites que impressionam, convertem e escalam.
+            </p>
+            <a href="#contato" class="btn btn-primary">
+              Solicitar Proposta <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <section class="section" id="sobre">
-            <div class="container grid about__container">
-                <div class="about__data">
-                    <span class="section__subtitle">Quem Somos</span>
-                    <h2 class="section__title">Bem-vindo à Nexusway</h2>
-                    <p class="about__description">
-                        Nascemos da paixão por tecnologia e da crença de que um bom design pode
-                        mudar o rumo de um negócio. Localizados em Vinhedo - SP, não criamos
-                        apenas sites; criamos pontes entre sua marca e seus clientes.
-                    </p>
-                    <div class="about__values">
-                        <div class="value__item">
-                            <i class="fas fa-palette"></i>
-                            <h3>Criatividade</h3>
-                            <p>Design único e memorável.</p>
-                        </div>
-                        <div class="value__item">
-                            <i class="fas fa-laptop-code"></i>
-                            <h3>Tecnologia</h3>
-                            <p>Soluções modernas e performáticas.</p>
-                        </div>
-                        <div class="value__item">
-                            <i class="fas fa-chart-line"></i>
-                            <h3>Resultado</h3>
-                            <p>Foco em conversão e crescimento.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about__image">
-                    <img src="assets/agency-image.png" alt="Equipe Nexusway trabalhando em soluções digitais">
-                </div>
+      <section class="section" id="sobre">
+        <div class="container grid about__container">
+          <div class="about__data">
+            <span class="section__subtitle">Quem Somos</span>
+            <h2 class="section__title">Bem-vindo à Nexusway</h2>
+            <p class="about__description">
+              Nascemos da paixão por tecnologia e da crença de que um bom design
+              pode mudar o rumo de um negócio. Localizados em Vinhedo - SP, não
+              criamos apenas sites; criamos pontes entre sua marca e seus
+              clientes.
+            </p>
+            <div class="about__values">
+              <div class="value__item">
+                <i class="fas fa-palette"></i>
+                <h3>Criatividade</h3>
+                <p>Design único e memorável.</p>
+              </div>
+              <div class="value__item">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Tecnologia</h3>
+                <p>Soluções modernas e performáticas.</p>
+              </div>
+              <div class="value__item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Resultado</h3>
+                <p>Foco em conversão e crescimento.</p>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="about__image">
+            <img
+              src="assets/agency-image.png"
+              alt="Equipe Nexusway trabalhando em soluções digitais"
+            />
+          </div>
+        </div>
+      </section>
 
-        <section class="section" id="servicos">
-            <span class="section__subtitle">Nossas Soluções</span>
-            <h2 class="section__title">O que fazemos pela sua marca</h2>
-            
-            <div class="servicos__container container grid">
-                <div class="servico__card">
-                    <i class="fas fa-drafting-compass"></i>
-                    <h3>Criação de Sites Profissionais</h3>
-                    <p>Desenvolvemos sites institucionais e e-commerces com foco na experiência do usuário (UX/UI).</p>
-                </div>
-                <div class="servico__card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Design Responsivo</h3>
-                    <p>Seu site perfeito em qualquer dispositivo: desktops, tablets e celulares (Mobile First).</p>
-                </div>
-                <div class="servico__card">
-                    <i class="fas fa-search-dollar"></i>
-                    <h3>Otimização SEO</h3>
-                    <p>Colocamos seu site nas primeiras posições do Google para atrair clientes organicamente.</p>
-                </div>
-                <div class="servico__card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Performance e Segurança</h3>
-                    <p>Sites rápidos, seguros (SSL) e otimizados para a melhor performance.</p>
-                </div>
-                <div class="servico__card">
-                    <i class="fas fa-bullseye"></i>
-                    <h3>Landing Pages e Portfólios</h3>
-                    <p>Páginas de alta conversão focadas em campanhas, produtos ou perfis profissionais.</p>
-                </div>
-                <div class="servico__card">
-                    <i class="fas fa-headset"></i>
-                    <h3>Suporte e Manutenção</h3>
-                    <p>Oferecemos suporte contínuo para garantir que seu site esteja sempre atualizado e funcional.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section" id="portfolio">
-            <span class="section__subtitle">Nosso Trabalho</span>
-            <h2 class="section__title">Projetos que nos dão orgulho</h2>
-            
-            <div class="portfolio__container container grid">
-                <div class="portfolio__card">
-                    <div class="portfolio__image">
-                        <img src="assets/mockup-terapeuta.png" alt="Mockup do site da Terapeuta & Mentora">
-                    </div>
-                    <div class="portfolio__data">
-                        <h3>Site de Terapeuta & Mentora</h3>
-                        <p>Site institucional acolhedor mostrando serviços e agendamento via WhatsApp.</p>
-                        <a href="https://milionigor.github.io/testando--site--terapeuta/" target="_blank" class="btn btn-secondary">
-                            Visitar Site <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="portfolio__card">
-                    <div class="portfolio__image">
-                        <img src="assets/mockup-lavajato.png" alt="Mockup do site Lava Jato do Fernandinho">
-                    </div>
-                    <div class="portfolio__data">
-                        <h3>Lava Jato do Fernandinho</h3>
-                        <p>Landing page automotiva moderna com animações, serviços e foco em agendamento.</p>
-                        <a href="https://milionigor.github.io/lavajatodofernandinho/" target="_blank" class="btn btn-secondary">
-                            Visitar Site <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="portfolio__card">
-                    <div class="portfolio__image">
-                        <img src="assets/mockup-confeitaria.png" alt="Mockup do site da Confeitaria">
-                    </div>
-                    <div class="portfolio__data">
-                        <h3>Confeitaria (Catálogo)</h3>
-                        <p>Site com catálogo de produtos, pedidos via WhatsApp e foco no visual gastronômico.</p>
-                        <a href="https://milionigor.github.io/sitetesteconfeitaria/" target="_blank" class="btn btn-secondary">
-                            Visitar Site <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="portfolio__card">
-                    <div class="portfolio__image">
-                        <img src="assets/mockup-padaria.png" alt="Mockup do site Padaria do Zezinho">
-                    </div>
-                    <div class="portfolio__data">
-                        <h3>Padaria do Zezinho</h3>
-                        <p>Site gastronômico destacando o cardápio, a tradição da marca e pedidos online.</p>
-                        <a href="https://milionigor.github.io/Padaria-do-zezinho-teste/" target="_blank" class="btn btn-secondary">
-                            Visitar Site <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section class="section" id="servicos">
+        <span class="section__subtitle">Nossas Soluções</span>
+        <h2 class="section__title">O que fazemos pela sua marca</h2>
 
-        <section class="section" id="depoimentos">
-            <span class="section__subtitle">Feedback</span>
-            <h2 class="section__title">O que nossos clientes dizem</h2>
-            
-            <div class="depoimentos__container container grid">
-                <div class="depoimento__card">
-                    <p>"A Nexusway não entregou apenas um site, entregou uma ferramenta de vendas. Nossos agendamentos triplicaram!"</p>
-                    <h4>- Mariana Silva</h4>
-                    <span>CEO, Soluções Tech</span>
-                    <div class="depoimento__estrelas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="depoimento__card">
-                    <p>"O design futurista ficou exatamente como eu imaginei. Profissionalismo do início ao fim."</p>
-                    <h4>- Ricardo Almeida</h4>
-                    <span>Diretor, Fina Estampa</span>
-                    <div class="depoimento__estrelas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="depoimento__card">
-                    <p>"Rápidos, criativos e com um suporte que realmente funciona. Recomendo de olhos fechados."</p>
-                    <h4>- Beatriz Costa</h4>
-                    <span>Fundadora, Doce Encanto</span>
-                    <div class="depoimento__estrelas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="depoimento__card">
-                    <p>"Entenderam perfeitamente minha necessidade e traduziram em um site leve, rápido e lindo."</p>
-                    <h4>- Lucas Pereira</h4>
-                    <span>Consultor Financeiro</span>
-                    <div class="depoimento__estrelas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="depoimento__card">
-                    <p>"O trabalho de SEO foi impecável. Estamos aparecendo na primeira página para nossas principais palavras-chave."</p>
-                    <h4>- Fernando Gomes</h4>
-                    <span>Gerente, AutoPrime</span>
-                    <div class="depoimento__estrelas">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="servicos__container container grid">
+          <div class="servico__card">
+            <i class="fas fa-drafting-compass"></i>
+            <h3>Criação de Sites Profissionais</h3>
+            <p>
+              Desenvolvemos sites institucionais e e-commerces com foco na
+              experiência do usuário (UX/UI).
+            </p>
+          </div>
+          <div class="servico__card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Design Responsivo</h3>
+            <p>
+              Seu site perfeito em qualquer dispositivo: desktops, tablets e
+              celulares (Mobile First).
+            </p>
+          </div>
+          <div class="servico__card">
+            <i class="fas fa-search-dollar"></i>
+            <h3>Otimização SEO</h3>
+            <p>
+              Colocamos seu site nas primeiras posições do Google para atrair
+              clientes organicamente.
+            </p>
+          </div>
+          <div class="servico__card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Performance e Segurança</h3>
+            <p>
+              Sites rápidos, seguros (SSL) e otimizados para a melhor
+              performance.
+            </p>
+          </div>
+          <div class="servico__card">
+            <i class="fas fa-bullseye"></i>
+            <h3>Landing Pages e Portfólios</h3>
+            <p>
+              Páginas de alta conversão focadas em campanhas, produtos ou perfis
+              profissionais.
+            </p>
+          </div>
+          <div class="servico__card">
+            <i class="fas fa-headset"></i>
+            <h3>Suporte e Manutenção</h3>
+            <p>
+              Oferecemos suporte contínuo para garantir que seu site esteja
+              sempre atualizado e funcional.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <section class="section cta__section">
-            <div class="cta__container container grid">
-                <div class="cta__data">
-                    <h2 class="cta__title">Pronto para levar seu negócio ao próximo nível?</h2>
-                    <p class="cta__description">
-                        Vamos conversar sobre seu projeto. Sem compromisso.
-                    </p>
-                    <a href="#contato" class="btn btn-primary btn-lg">
-                        <i class="fas fa-paper-plane"></i> Solicitar Proposta Agora
-                    </a>
-                </div>
-            </div>
-        </section>
+      <section class="section" id="portfolio">
+        <span class="section__subtitle">Nosso Trabalho</span>
+        <h2 class="section__title">Projetos que nos dão orgulho</h2>
 
-        <section class="section" id="contato">
-            <span class="section__subtitle">Fale Conosco</span>
-            <h2 class="section__title">Estamos prontos para o seu projeto</h2>
-            
-            <div class="contato__container container grid">
-                <form action="#" class="contato__form" id="contact-form">
-                    <div class="form__group">
-                        <input type="text" name="nome" placeholder="Seu nome" class="form__input" required>
-                    </div>
-                    <div class="form__group">
-                        <input type="email" name="email" placeholder="Seu e-mail" class="form__input" required>
-                    </div>
-                    <div class="form__group">
-                        <textarea name="mensagem" placeholder="Sua mensagem (Fale sobre seu projeto)" class="form__input" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        Enviar Mensagem <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-                
-                <div class="contato__info">
-                    <h3>Nossas Informações</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Vinhedo - SP</p>
-                    <p><i class="fas fa-envelope"></i> contato@nexusway.com.br</p>
-                    <p><i class="fas fa-phone"></i> (19) 9XXXX-XXXX</p>
-                    
-                    <div class="social__icons">
-                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    </div>
-                </div>
+        <div class="portfolio__container container grid">
+          <div class="portfolio__card">
+            <div class="portfolio__image">
+              <img
+                src="assets/mockup-terapeuta.png"
+                alt="Mockup do site da Terapeuta & Mentora"
+              />
             </div>
-        </section>
-    </main>
+            <div class="portfolio__data">
+              <h3>Site de Terapeuta & Mentora</h3>
+              <p>
+                Site institucional acolhedor mostrando serviços e agendamento
+                via WhatsApp.
+              </p>
+              <a
+                href="https://milionigor.github.io/testando--site--terapeuta/"
+                target="_blank"
+                class="btn btn-secondary"
+              >
+                Visitar Site <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="portfolio__image">
+              <img
+                src="assets/mockup-lavajato.png"
+                alt="Mockup do site Lava Jato do Fernandinho"
+              />
+            </div>
+            <div class="portfolio__data">
+              <h3>Lava Jato do Fernandinho</h3>
+              <p>
+                Landing page automotiva moderna com animações, serviços e foco
+                em agendamento.
+              </p>
+              <a
+                href="https://milionigor.github.io/lavajatodofernandinho/"
+                target="_blank"
+                class="btn btn-secondary"
+              >
+                Visitar Site <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="portfolio__image">
+              <img
+                src="assets/mockup-confeitaria.png"
+                alt="Mockup do site da Confeitaria"
+              />
+            </div>
+            <div class="portfolio__data">
+              <h3>Confeitaria (Catálogo)</h3>
+              <p>
+                Site com catálogo de produtos, pedidos via WhatsApp e foco no
+                visual gastronômico.
+              </p>
+              <a
+                href="https://milionigor.github.io/sitetesteconfeitaria/"
+                target="_blank"
+                class="btn btn-secondary"
+              >
+                Visitar Site <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio__card">
+            <div class="portfolio__image">
+              <img
+                src="assets/mockup-padaria.png"
+                alt="Mockup do site Padaria do Zezinho"
+              />
+            </div>
+            <div class="portfolio__data">
+              <h3>Padaria do Zezinho</h3>
+              <p>
+                Site gastronômico destacando o cardápio, a tradição da marca e
+                pedidos online.
+              </p>
+              <a
+                href="https://milionigor.github.io/Padaria-do-zezinho-teste/"
+                target="_blank"
+                class="btn btn-secondary"
+              >
+                Visitar Site <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="depoimentos">
+        <span class="section__subtitle">Feedback</span>
+        <h2 class="section__title">O que nossos clientes dizem</h2>
+
+        <div class="depoimentos__container container grid">
+          <div class="depoimento__card">
+            <p>
+              "A Nexusway não entregou apenas um site, entregou uma ferramenta
+              de vendas. Nossos agendamentos triplicaram!"
+            </p>
+            <h4>- Mariana Silva</h4>
+            <span>CEO, Soluções Tech</span>
+            <div class="depoimento__estrelas">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="depoimento__card">
+            <p>
+              "O design futurista ficou exatamente como eu imaginei.
+              Profissionalismo do início ao fim."
+            </p>
+            <h4>- Ricardo Almeida</h4>
+            <span>Diretor, Fina Estampa</span>
+            <div class="depoimento__estrelas">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="depoimento__card">
+            <p>
+              "Rápidos, criativos e com um suporte que realmente funciona.
+              Recomendo de olhos fechados."
+            </p>
+            <h4>- Beatriz Costa</h4>
+            <span>Fundadora, Doce Encanto</span>
+            <div class="depoimento__estrelas">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="depoimento__card">
+            <p>
+              "Entenderam perfeitamente minha necessidade e traduziram em um
+              site leve, rápido e lindo."
+            </p>
+            <h4>- Lucas Pereira</h4>
+            <span>Consultor Financeiro</span>
+            <div class="depoimento__estrelas">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="depoimento__card">
+            <p>
+              "O trabalho de SEO foi impecável. Estamos aparecendo na primeira
+              página para nossas principais palavras-chave."
+            </p>
+            <h4>- Fernando Gomes</h4>
+            <span>Gerente, AutoPrime</span>
+            <div class="depoimento__estrelas">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta__section">
+        <div class="cta__container container grid">
+          <div class="cta__data">
+            <h2 class="cta__title">
+              Pronto para levar seu negócio ao próximo nível?
+            </h2>
+            <p class="cta__description">
+              Vamos conversar sobre seu projeto. Sem compromisso.
+            </p>
+            <a href="#contato" class="btn btn-primary btn-lg">
+              <i class="fas fa-paper-plane"></i> Solicitar Proposta Agora
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contato">
+        <span class="section__subtitle">Fale Conosco</span>
+        <h2 class="section__title">Estamos prontos para o seu projeto</h2>
+
+        <div class="contato__container container grid">
+          
+          <form
+            action="https://formspree.io/f/xpwovqav"
+            method="POST"
+            class="contato__form"
+          >
+            <input
+              type="hidden"
+              name="_next"
+              value="https://milionigor.github.io/NexusWay-sites-exemplos/obrigado.html"
+            />
+
+            <div class="form__group">
+              <input
+                type="text"
+                name="nome"
+                placeholder="Seu nome"
+                class="form__input"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Seu e-mail"
+                class="form__input"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <textarea
+                name="mensagem"
+                placeholder="Sua mensagem (Fale sobre seu projeto)"
+                class="form__input"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Enviar Mensagem <i class="fas fa-paper-plane"></i>
+            </button>
+
+          </form> <div class="contato__info">
+            <h3>Nossas Informações</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Vinhedo - SP</p>
+            <p><i class="fas fa-envelope"></i> contato@nexusway.com.br</p>
+            <p><i class="fas fa-phone"></i> (19) 9XXXX-XXXX</p>
+
+            <div class="social__icons">
+              <a href="#" target="_blank" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" target="_blank" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" target="_blank" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      </main>
 
     <footer class="footer">
-        <div class="footer__container container">
-            <p class="footer__copy">
-                &copy; 2025 Nexusway. Todos os direitos reservados.
-            </p>
-            <p class="footer__credits">
-                Criando o futuro digital.
-            </p>
-        </div>
+      <div class="footer__container container">
+        <p class="footer__copy">
+          &copy; 2025 Nexusway. Todos os direitos reservados.
+        </p>
+        <p class="footer__credits">Criando o futuro digital.</p>
+      </div>
     </footer>
 
-    <a href="https://api.whatsapp.com/send?phone=SEUNUMEROAQUI&text=Olá!%20Visitei%20o%20site%20da%20Nexusway%20e%20gostaria%20de%20um%20orçamento."
-       target="_blank" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a
+      href="https://api.whatsapp.com/send?phone=5519989609605&text=Olá!%20Visitei%20o%2sito%20da%20Nexusway%20e%20gostaria%20de%20um%20orçamento."
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="Fale conosco pelo WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
     </a>
-    
+
     <a href="#" class="scrollup" id="scroll-up">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </a>
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
